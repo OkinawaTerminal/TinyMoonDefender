@@ -85,6 +85,11 @@ export default class GameScreen {
     const audio = document.createElement('audio')
     document.body.appendChild(audio)
     audio.src = 'res/reformat.mp3'
+    audio.volume = 0.2
+    audio.addEventListener('ended', () => {
+      audio.currentTime = 0
+      audio.play()
+    }, false)
     audio.play()
   }
 

@@ -32,7 +32,7 @@ const angularRadius = Math.atan(0.05 / 1.05)
 export default class Player {
   constructor(keyReader) {
     this.type = 'player'
-    this.health = -1
+    this.health = 5
     this.state = ShipStates.SPAWNING
 
     this.keys = keyReader
@@ -95,7 +95,7 @@ export default class Player {
     this.bulletPool.reset()
 
     this.state = ShipStates.SPAWNING
-    this.health = -1
+    this.health = 5
   }
 
   update() {
